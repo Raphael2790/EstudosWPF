@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="ContactsApp.ContactControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ContactsApp"
+             mc:Ignorable="d" 
+             d:DesignHeight="150" d:DesignWidth="300">
+    <Grid Background="#AAE5E5E5">
+        <StackPanel Margin="5">
+            <Image x:Name="contactPhoto"  Width="50" Height="50" HorizontalAlignment="Left"/>
+            <TextBlock x:Name="nameTextBlock" Text="Raphael" FontSize="20" FontWeight="Bold"/>
+            <TextBlock x:Name="emailTextBlock" Text="email@email.com" FontSize="15" Foreground="DodgerBlue"/>
+            <TextBlock x:Name="phoneTextBlock" Text="1199999999" FontSize="15" FontStyle="Italic"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

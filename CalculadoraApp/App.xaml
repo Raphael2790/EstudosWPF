@@ -1,0 +1,35 @@
+﻿<Application x:Class="CalculadoraApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:CalculadoraApp"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <SolidColorBrush x:Key="foregroundButonColor" Color="White" />
+        <SolidColorBrush x:Key="operatorsColor" Color="Orange"/>
+        <SolidColorBrush x:Key="numbersColor" Color="#555555" />
+
+        <!--Implicity Style-->
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="70"/>
+        </Style>
+        <!--Implicity Style-->
+
+        <!--Explicit Style-->
+        <Style x:Key="operatorsButtonStyle" TargetType="Button">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="FontWeight" Value="UltraBold"/>
+            <Setter Property="Background" Value="{StaticResource operatorsColor}"/>
+        </Style>
+
+        <Style x:Key="numbersButtonStyle" TargetType="Button" BasedOn="{StaticResource operatorsButtonStyle}">
+            <Setter Property="Background" Value="{StaticResource numbersColor}"/>
+        </Style>
+        <!--Explicit Style-->
+    </Application.Resources>
+</Application>
